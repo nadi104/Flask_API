@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block title%}
+    {{name}}
+{% endblock %}
+
+{% block body%}
+    <div  style="padding-top:30% ; padding-left:50% " >
+        <a href="{{url_for('login')}}">
+            <button type="submit">Login</button>
+        </a>
+        <a href="{{url_for('singin')}}">
+            <button type="submit">Register</button>
+        </a>
+    </div>
+
+
+{% endblock %}

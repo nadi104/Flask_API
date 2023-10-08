@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block title%}
+    {{name}}
+{% endblock %}
+
+{% block body%}
+    <form action="/test2" method="POST">
+          <p>User Name</p>
+          <input type="text" name="user" placeholder="User Name">
+          <button type="submit">Login</button>
+    </form>
+
+
+{% endblock %}

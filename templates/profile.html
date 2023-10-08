@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% block title%}
+
+{% endblock %}
+
+{% block body%}
+<h1 xmlns="http://www.w3.org/1999/html">User List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>UserName</th>
+                <th>PassWord</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for user in users%}
+                <tr>
+                    <td>{{user.userName}}</td>
+                    <td>{{user.passWord}}</td>
+                    <td>
+                        <form method="POST" action="/delete/{{user.userName}}">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                    <td>
+                        <form method="GET" action="/update/{{user.userName}}">
+                            <input type="submit" value="Upadate Password">
+                        </form>
+
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+{% endblock %}
